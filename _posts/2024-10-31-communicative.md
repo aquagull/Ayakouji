@@ -1,6 +1,7 @@
 ---
 title: "通信原语"
 date: 2024-10-31
+categories: [distributed trainning]
 ---
 ### Broadcast
  broadcast，表示某一个节点将自己的数据发送给其他节点。
