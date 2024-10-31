@@ -1,4 +1,4 @@
 ---
-title: Welcome to my blog, wish a good life
+title: Welcome to my blog
 ---
 
