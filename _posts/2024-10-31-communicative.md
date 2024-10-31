@@ -35,4 +35,5 @@ all gather，相当于gather + broadcast。
 
 ### Reduce Scatter
 reduce scatter，先将各个节点的数据分块，然后按块做reduce，此时做reduce的这个节点再将这些块发出去。
+
 ![](https://pic3.zhimg.com/v2-14cdd631faae00452885a116dd36737c_b.jpg)
