@@ -11,7 +11,7 @@ kramdown:
   toc_levels: 1..6  # 允许生成目录的标题级别
 
 # SEO settings
-title: Your Site Title
+title: Ayakouji
 description: Your site description here
 url: https://aquagull.github.io/Ayakouji
 
@@ -19,7 +19,6 @@ url: https://aquagull.github.io/Ayakouji
 paginate: 5  # 每页显示的文章数量
 
 # Customization
-show_excerpts: true  # 显示摘要
 show_date: true      # 显示文章日期
 show_categories: true # 显示文章分类
 
