@@ -1,6 +1,3 @@
-theme: minima
-markdown: kramdown
-
 # Kramdown settings
 kramdown:
   input: GFM
@@ -22,11 +19,19 @@ paginate: 5  # 每页显示的文章数量
 show_date: true      # 显示文章日期
 show_categories: true # 显示文章分类
 
-# Social links (如果需要)
+# Enable plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-highlight
+
+# Social links
 social_links:
   - icon: "fa-github"
     url: "https://github.com/aquagull"
 
-# Enable RSS feed
-plugins:
-  - jekyll-feed
+# Categories
+categories:
+  - category1
+  - category2
