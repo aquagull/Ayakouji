@@ -1,13 +1,8 @@
 ---
-layout: default  # 保持为default布局
+layout: math
 title: "Mixed Precision"
 date: 2024-10-31
 categories: [distributed training]
-header:
-  - '<script src="https://polyfill.io/v3/polyfill.min.js?features=katex"></script>'
-  - '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />'
-  - '<script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>'
-  - '<script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>'
 ---
 
 为什么需要混合精度训练？使用fp16训练相比于fp32，带来的好处有：
