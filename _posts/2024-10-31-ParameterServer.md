@@ -1,7 +1,8 @@
 ---
 title: "ParameterServer"
 date: 2024-10-31
-categories: [distributed trainning]
+categories: 
+  - distributed training
 ---
 
 之前几代的Parameter Server都没能够给出让人接受的答案，主要是因为分布式训练参数的中心化存储有着以下几个问题：
