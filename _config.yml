@@ -1,6 +1,7 @@
 theme: minima
 markdown: kramdown
 
+# Kramdown settings
 kramdown:
   input: GFM
   hard_wrap: false
@@ -8,3 +9,25 @@ kramdown:
   syntax_highlighter_opts:
     css_class: 'highlight'
   toc_levels: 1..6  # 允许生成目录的标题级别
+
+# SEO settings
+title: Your Site Title
+description: Your site description here
+url: https://aquagull.github.io/Ayakouji
+
+# Pagination
+paginate: 5  # 每页显示的文章数量
+
+# Customization
+show_excerpts: true  # 显示摘要
+show_date: true      # 显示文章日期
+show_categories: true # 显示文章分类
+
+# Social links (如果需要)
+social_links:
+  - icon: "fa-github"
+    url: "https://github.com/aquagull"
+
+# Enable RSS feed
+plugins:
+  - jekyll-feed
