@@ -1,11 +1,12 @@
 ---
-layout: default
-title: 分类
+layout: base
+title: Categories
 ---
 
-<h1>所有分类</h1>
+<h1>Categories</h1>
+
 <ul>
   {% for category in site.categories %}
-    <li><a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}">{{ category[0] }}</a> ({{ category[1].size }})</li>
+    <li><a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a> ({{ site.categories[category].size }})</li>
   {% endfor %}
 </ul>
