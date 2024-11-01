@@ -36,6 +36,11 @@ header_pages:
 minima:
   skin: classic
   
+  # 启用分类和归档功能
+  categories:
+    enabled: true
+  archives:
+    enabled: true
   # Minima date format.
   # The default value is "%b %d, %Y" (e.g. Nov 14, 2023) 
   # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
