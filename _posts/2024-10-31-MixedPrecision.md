@@ -1,9 +1,11 @@
 ---
-layout: math
+layout: default
 title: "Mixed Precision"
 date: 2024-10-31
 categories: [distributed training]
 ---
+
+{% include mathjax.html %}
 
 为什么需要混合精度训练？使用fp16训练相比于fp32，带来的好处有：
 1. **减少内存占用**
