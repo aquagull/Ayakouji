@@ -30,8 +30,8 @@ layout: base
   <!-- 添加分类显示 -->
   <div class="post-categories">
     {% if page.categories %}
-      <p class="post-categories">
-        category：
+      <p class="post-meta">  <!-- 修改为相同的类名 -->
+        分类:
         {% for category in page.categories %}
           <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}
         {% endfor %}
