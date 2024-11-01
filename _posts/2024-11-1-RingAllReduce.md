@@ -31,3 +31,25 @@ Pytorch中的`torch.nn.DataParallel`就是采用这种方式在GPU之间汇聚�
 在该算法中，所有GPU组成一个环。算法总共包含两个步骤，分别为scatter-reduce和allgather。
 
 ![](https://blog-assets.unvs.cc/2021/05/ring-allreduce-fig2.webp)
+
+### scatter-reduce
+为了保证每个GPU通信量和计算量尽可能靠近，模型的参数会按照GPU数量$N$来划分成大小相等的块，然后将每一数据块通过$N - 1$次数据传输汇聚到一个GPU上。
+
+![](https://blog-assets.unvs.cc/2021/05/ring-allreduce-fig3.webp)
+
+### all gather
+接下来我们进行allgather步骤，将这些黄色数据覆盖所有GPU，总计需要$N - 1$次数据传输。
+
+![](https://blog-assets.unvs.cc/2021/05/ring-allreduce-fig4.webp)
+
+下面我们计算一下每块GPU的通信量，可以明显的感觉到，Ring AllReduce算法中每块GPU都是对等的，因此通信量大小都是一致的：
+- scatter-reduce步骤：每一回，每块GPU从左邻居接受$K \div N$的数据，也向其右邻居发送相同大小的数据，重复$N - 1$次。
+
+- allgather步骤：也跟scatter-reduce步骤通信量相同。
+
+最终，每块GPU的通信量就是$2 \cdot (N - 1) \cdot (K \div N)$。
+从最终的表达式分析，可以得到：
+- 每块GPU的通信量与GPU的数目无关。
+- 整个算法受限于最慢的GPU。 
+
+PyTorch 中的`torch.nn.parallel.DistributedDataParallel`就是采用了 Ring Allreduce 算法。
