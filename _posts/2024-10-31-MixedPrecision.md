@@ -27,9 +27,9 @@ categories: [distributed training]
 ![](https://pic4.zhimg.com/v2-723c1d3de5f3730e94301735252ac581_r.jpg)
 
 weight backup主要用于解决舍入误差的问题。在训练的后期，模型梯度可能会非常小，使用fp16可能会因为舍入的原因导致本轮训练失败，影响模型收敛。因此，在计算过程中，weight、activations、gradient都是fp16，但额外保存了一份fp32的weight，用于更新weight。weight的更新公式为：
-\[
-\text{$weight_{32}$ = $weight_{32}$ + $\alpha$ * $gradient_{16}$}
-\]
+$$
+weight_{32} = weight_{32} + \alpha \cdot gradient_{16}
+$$
 模型的权重属于静态内存占用，训练过程中动态内存往往是静态内存的$3-4$倍。最主要的内存开销减半，总体内存占用也自然是减少的。
 
 
