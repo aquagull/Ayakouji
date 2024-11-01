@@ -43,17 +43,6 @@ layout: base
     {{ content }}
   </div>
 
-  <!-- 添加归档显示 -->
-  <div class="post-archive">
-    <h2>归档</h2>
-    <ul>
-      {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
-      {% for post in sorted_posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: '%Y-%m' }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
