@@ -1,7 +1,7 @@
 ---
 layout: math
 title: "Ring AllReduce"
-date: 2024-10-31
+date: 2024-11-1
 categories: [distributed training]
 ---
 
