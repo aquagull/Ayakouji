@@ -1,4 +1,4 @@
-theme: jekyll-theme-minimal
+theme: minima
 # Kramdown settings
 kramdown:
   input: GFM
@@ -26,6 +26,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-highlight
+  - jekyll-search
 
 # Social links
 social_links:
@@ -34,5 +35,4 @@ social_links:
 
 # Categories
 categories:
-  - category1
-  - category2
+  - distributed training
