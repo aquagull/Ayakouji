@@ -31,7 +31,7 @@ layout: base
   <div class="post-categories">
     {% if page.categories %}
       <p class="post-categories">
-        分类:
+        category：
         {% for category in page.categories %}
           <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}
         {% endfor %}
